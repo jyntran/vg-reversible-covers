@@ -1,0 +1,41 @@
+.game {
+  width: 500px;
+  height: 300px;
+  margin: auto;
+  position: relative;
+}
+
+.game-title {
+	text-align: center;
+	font-weight: bold;
+	padding: .8em;
+}
+
+.cover {
+	width: 100%;
+	height: 100%;
+	transition: all 1s;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.original {
+	z-index: 2;
+}
+
+.reverse {
+	z-index: 1;
+	transform: rotateY(-180deg);
+}
+
+.game.flipped .original {
+	z-index: 1;
+	transform: rotateY(180deg);
+}
+
+.game.flipped .reverse {
+	z-index: 2;
+	transform: rotateY(0deg);
+}

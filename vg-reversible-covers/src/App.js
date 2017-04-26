@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './style.css';
+
+import Game from './Game';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      
+        <Game
+          title="The Evil Within"
+          original="covers/the-evil-within-original.jpg"
+          reverse="covers/the-evil-within-reverse.jpg"
+          >
+        </Game>
+
+        <Game
+          title="Metal Gear Solid V: Ground Zeroes"
+          original="covers/metal-gear-solid-v-ground-zeroes-original.jpg"
+          reverse="covers/metal-gear-solid-v-ground-zeroes-reverse.png"
+          >
+        </Game>
+
       </div>
     );
   }
