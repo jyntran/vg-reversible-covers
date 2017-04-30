@@ -22,15 +22,19 @@ class Game extends Component {
 		})
 
 		return (
-			<div className='game-container'>
-				<div className={gameClasses}
-					onClick={this.handleClick}>
-						<img className="original cover" src={this.props.original} alt="Original Cover" />
-						<img className="reverse cover" src={this.props.reverse} alt="Reverse Cover" />
+	        <div className="col-sm-12 col-lg-6">
+    	      <div className="card fluid">
+        	    <div className="section">
+					<h3>{this.props.title}</h3>
+					<div className='game-container'>
+						<div className={gameClasses}
+							onClick={this.handleClick}>
+							<img className="original cover" src={this.props.original} alt="Original Cover" />
+							<img className="reverse cover" src={this.props.reverse} alt="Reverse Cover" />
+						</div>
+					</div>
 				</div>
-				<div className='game-title'>
-					{this.props.title}
-				</div>
+			  </div>
 			</div>
 		)
 	}
